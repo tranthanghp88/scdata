@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "truyenfullmoi",
+  "version": "1.0.0",
+  "name": "Truyện Full Mới",
+  "domains": [
+    "truyenfullmoi.net"
+  ],
+  "parser": "PROFILE",
+  "profile": {
+    "selectors": {
+      "bookTitle": [
+        "h1",
+        ".title",
+        ".book-title"
+      ],
+      "bookAuthor": [
+        "a[itemprop='author']",
+        "a[href*='/tac-gia/']",
+        ".author"
+      ],
+      "bookCover": [
+        "img[itemprop='image']",
+        ".book-cover img",
+        ".cover img"
+      ],
+      "bookDescription": [
+        "[itemprop='description']",
+        ".desc-text",
+        ".description"
+      ],
+      "chapterContainers": [
+        "#list-chapter",
+        "#chapter-list"
+      ],
+      "chapterLinks": [
+        "a[href*='/chuong-']"
+      ],
+      "pagination": [
+        ".pagination a[href*='/trang-']",
+        "a[href*='/trang-']"
+      ],
+      "chapterTitle": [
+        "h1",
+        ".chapter-title"
+      ],
+      "chapterContent": [
+        "#chapter-content",
+        "#chapter-c",
+        "#content",
+        ".chapter-content",
+        ".reading-content",
+        "[itemprop='articleBody']"
+      ],
+      "removeElements": [
+        "script",
+        "style",
+        "noscript",
+        "iframe",
+        ".ads",
+        "[class*='advert']"
+      ]
+    },
+    "maxConcurrency": 6,
+    "minDelayMs": 100,
+    "chapterUrlRules": {
+      "patterns": [
+        "^/[^/]+/chuong-\\d+(?:-[^/]+)?\\.html/?$"
+      ],
+      "extractFrom": "URL_PATH",
+      "allowDomIndexFallback": false
+    },
+    "paginationRules": {
+      "strategy": "PAGE_LINKS",
+      "pageLinkSelector": ".pagination a[href*='/trang-']"
+    }
+  }
+}

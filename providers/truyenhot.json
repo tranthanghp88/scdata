@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "truyenhot",
+  "version": "1.0.0",
+  "name": "Truyện Hot",
+  "domains": [
+    "truyenhot.net"
+  ],
+  "parser": "TRUYENHOT",
+  "profile": {
+    "selectors": {
+      "bookTitle": [
+        "main h1",
+        "h1"
+      ],
+      "bookAuthor": [
+        "a[href*='/tac-gia/']",
+        ".author"
+      ],
+      "bookCover": [
+        "main img",
+        ".book-cover img"
+      ],
+      "bookDescription": [
+        "article",
+        "[class*='description']",
+        "[class*='intro']"
+      ],
+      "chapterContainers": [
+        ".chapter-list-container .row",
+        "main"
+      ],
+      "chapterLinks": [
+        "a[href*='/chuong-']"
+      ],
+      "chapterTitle": [
+        "main h1",
+        "h1"
+      ],
+      "chapterContent": [
+        ".chapter-content",
+        "#chapter-content",
+        ".reading-content",
+        "article"
+      ],
+      "removeElements": [
+        "script",
+        "style",
+        "noscript",
+        "iframe",
+        "nav",
+        "footer",
+        ".ads",
+        "[class*='advert']"
+      ]
+    },
+    "maxConcurrency": 4,
+    "minDelayMs": 150,
+    "chapterUrlRules": {
+      "patterns": [
+        "^/truyen/[^/]+/chuong-\\d+/?$"
+      ],
+      "extractFrom": "URL_PATH",
+      "allowDomIndexFallback": false
+    },
+    "paginationRules": {
+      "strategy": "NONE"
+    }
+  }
+}

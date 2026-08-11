@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "vivutruyen",
+  "version": "1.0.0",
+  "name": "Vivu Truyện",
+  "domains": [
+    "vivutruyen.net"
+  ],
+  "parser": "PROFILE",
+  "profile": {
+    "selectors": {
+      "bookTitle": [
+        "h1",
+        ".uk-article-title",
+        ".entry-title",
+        ".title"
+      ],
+      "bookAuthor": [
+        "a[href*='/tac-gia/']",
+        ".author",
+        "[class*='author']"
+      ],
+      "bookCover": [
+        "article img",
+        ".uk-article img",
+        ".cover img"
+      ],
+      "bookDescription": [
+        ".uk-article .description",
+        ".entry-content",
+        ".description"
+      ],
+      "chapterContainers": [
+        "article",
+        ".uk-article",
+        "main"
+      ],
+      "chapterLinks": [
+        "a[href*='/chuong-']"
+      ],
+      "chapterTitle": [
+        "h1",
+        ".uk-article-title",
+        ".entry-title"
+      ],
+      "chapterContent": [
+        ".uk-width-1-1.reading",
+        ".reading"
+      ],
+      "removeElements": [
+        "script",
+        "style",
+        "noscript",
+        "iframe",
+        ".ads",
+        "[class*='advert']"
+      ]
+    },
+    "maxConcurrency": 3,
+    "minDelayMs": 200,
+    "chapterUrlRules": {
+      "patterns": [
+        "^/[^/]+/chuong-\\d+/?$"
+      ],
+      "extractFrom": "URL_PATH",
+      "allowDomIndexFallback": false
+    },
+    "paginationRules": {
+      "strategy": "NONE"
+    }
+  }
+}

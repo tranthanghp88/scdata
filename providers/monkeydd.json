@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "monkeydd",
+  "version": "1.0.1",
+  "name": "MonkeyD",
+  "domains": [
+    "monkeydd.com"
+  ],
+  "parser": "PROFILE",
+  "profile": {
+    "selectors": {
+      "bookTitle": [
+        "h1",
+        "[itemprop='name']",
+        ".story-title",
+        ".title"
+      ],
+      "bookAuthor": [
+        "a[href*='/tac-gia/']",
+        ".author",
+        "[class*='author']"
+      ],
+      "bookCover": [
+        "main img[data-src]",
+        ".story-cover img",
+        ".cover img"
+      ],
+      "bookDescription": [
+        "[itemprop='description']",
+        ".story-description",
+        ".description"
+      ],
+      "chapterContainers": [
+        "#listChapters",
+        "[data-type='story']",
+        "main"
+      ],
+      "chapterLinks": [
+        "a[href*='/chuong-']"
+      ],
+      "chapterTitle": [
+        "h1",
+        ".chapter-title"
+      ],
+      "chapterContent": [
+        "#chapter-content",
+        "#content",
+        ".chapter-content",
+        ".reading-content",
+        "[itemprop='articleBody']"
+      ],
+      "removeElements": [
+        "script",
+        "style",
+        "noscript",
+        "iframe",
+        ".ads",
+        "[class*='advert']"
+      ]
+    },
+    "maxConcurrency": 3,
+    "minDelayMs": 200,
+    "chapterUrlRules": {
+      "patterns": [
+        "^/[^/]+/chuong-\\d+(?:-?[^/]+)?\\.html/?$"
+      ],
+      "extractFrom": "URL_PATH",
+      "allowDomIndexFallback": false
+    },
+    "paginationRules": {
+      "strategy": "NONE"
+    }
+  }
+}

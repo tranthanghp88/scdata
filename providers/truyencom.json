@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "truyencom",
+  "version": "1.0.0",
+  "name": "TruyenCom",
+  "domains": [
+    "truyencom.com"
+  ],
+  "parser": "TRUYENCOM",
+  "profile": {
+    "selectors": {
+      "bookTitle": [
+        "h1",
+        ".book-title",
+        ".story-title",
+        ".title"
+      ],
+      "bookAuthor": [
+        "a[href*='/tac-gia/']",
+        ".author",
+        "[class*='author']"
+      ],
+      "bookCover": [
+        ".book-cover img",
+        ".story-cover img",
+        ".cover img"
+      ],
+      "bookDescription": [
+        ".book-description",
+        ".story-description",
+        ".description",
+        ".desc"
+      ],
+      "chapterContainers": [
+        "#list-chapter",
+        ".chapter-list",
+        ".list-chapter",
+        "main",
+        "body"
+      ],
+      "chapterLinks": [
+        "a[href*='/chuong-']"
+      ],
+      "pagination": [
+        ".pagination a",
+        "a[href*='page=']",
+        "a[href*='/trang-']"
+      ],
+      "chapterTitle": [
+        "h1",
+        ".chapter-title"
+      ],
+      "chapterContent": [
+        "#chapter-content",
+        "#content",
+        ".chapter-content",
+        ".reading-content"
+      ],
+      "removeElements": [
+        "script",
+        "style",
+        "noscript",
+        "iframe",
+        ".ads",
+        "[class*='advert']"
+      ]
+    },
+    "maxConcurrency": 3,
+    "minDelayMs": 250,
+    "chapterUrlRules": {
+      "patterns": [
+        "/chuong-\\d+"
+      ],
+      "extractFrom": "URL_PATH",
+      "allowDomIndexFallback": false
+    },
+    "paginationRules": {
+      "strategy": "PAGE_LINKS",
+      "pageLinkSelector": ".pagination a, a[href*='page='], a[href*='/trang-']"
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "metruyenchuvn",
+  "version": "1.0.0",
+  "name": "Mê Truyện Chữ VN",
+  "domains": [
+    "metruyenchuvn.com",
+    "metruyenchuvn.org"
+  ],
+  "parser": "PROFILE",
+  "profile": {
+    "selectors": {
+      "bookTitle": [
+        "h1.nh-title",
+        "h1",
+        ".book-title"
+      ],
+      "bookAuthor": [
+        "a[href*='/tac-gia/']",
+        ".tac-gia",
+        ".author"
+      ],
+      "bookCover": [
+        ".nh-thumb img",
+        ".book-cover img",
+        "img.cover"
+      ],
+      "bookDescription": [
+        "#nh-gioi-thieu",
+        ".nh-section__body",
+        ".book-desc"
+      ],
+      "chapterContainers": [
+        "#chuong-list",
+        ".nh-section__body ul",
+        ".chapter-list"
+      ],
+      "chapterLinks": [
+        "a[href*='/chuong-']",
+        "a"
+      ],
+      "pagination": [
+        ".pagination a",
+        "ul.pagination a",
+        "a.page-link",
+        ".paging a"
+      ],
+      "chapterTitle": [
+        "h2.nh-read__title",
+        "h2",
+        ".chapter-title"
+      ],
+      "chapterContent": [
+        "#read-content",
+        ".nh-read__content",
+        ".chapter-content"
+      ],
+      "removeElements": [
+        "script",
+        "style",
+        ".ads",
+        ".advertisement"
+      ]
+    },
+    "maxConcurrency": 1,
+    "minDelayMs": 750,
+    "chapterUrlRules": {
+      "patterns": [
+        "/(?:chuong-\\d+|chuong-tiep-|chuong-chuong--)"
+      ],
+      "extractFrom": "URL_PATH",
+      "allowDomIndexFallback": false
+    },
+    "paginationRules": {
+      "strategy": "PAGE_LINKS",
+      "pageLinkSelector": ".pagination a, ul.pagination a, a.page-link, .paging a"
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "tvtruyen",
+  "version": "1.1.0",
+  "name": "TV Truyện",
+  "domains": [
+    "tvtruyen.vip",
+    "tvtruyen.cc",
+    "tvtruyen.onl",
+    "tvtruyen.site",
+    "tvtruyen.com",
+    "tvtruyen.co.uk"
+  ],
+  "parser": "PROFILE",
+  "profile": {
+    "selectors": {
+      "bookTitle": [
+        "h1",
+        ".entry-title",
+        ".book-title"
+      ],
+      "bookAuthor": [
+        "a[href*='/tac-gia/']",
+        ".author",
+        "[class*='author']"
+      ],
+      "bookCover": [
+        ".book-cover img",
+        ".entry-content img",
+        "main img"
+      ],
+      "bookDescription": [
+        ".description",
+        ".entry-content",
+        "[class*='intro']"
+      ],
+      "chapterContainers": [
+        "#list-chapter"
+      ],
+      "chapterLinks": [
+        "#list-chapter a[href*='/chuong-']"
+      ],
+      "pagination": [
+        ".custom-pagination-wrapper a[href*='page=']",
+        "#list-chapter a[href*='?page=']"
+      ],
+      "chapterTitle": [
+        "h1",
+        ".entry-title",
+        ".chapter-title"
+      ],
+      "chapterContent": [
+        "#chapter-content",
+        ".chapter-content",
+        ".entry-content"
+      ],
+      "removeElements": [
+        "script",
+        "style",
+        "noscript",
+        "iframe",
+        "nav",
+        "footer",
+        ".ads",
+        "[class*='advert']"
+      ]
+    },
+    "maxConcurrency": 6,
+    "minDelayMs": 80,
+    "chapterUrlRules": {
+      "patterns": [
+        "^/[^/]+/chuong-\\d+(?:-[^/]+)?/?$"
+      ],
+      "extractFrom": "URL_PATH",
+      "allowDomIndexFallback": false
+    },
+    "paginationRules": {
+      "strategy": "PAGE_LINKS",
+      "pageLinkSelector": ".custom-pagination-wrapper a[href*='page='], #list-chapter a[href*='?page=']",
+      "pageParamName": "page"
+    }
+  }
+}

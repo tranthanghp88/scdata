@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "nhanisme",
+  "version": "1.0.0",
+  "name": "Truyện Nhanisme",
+  "domains": [
+    "truyen.nhanisme.com"
+  ],
+  "parser": "PROFILE",
+  "profile": {
+    "selectors": {
+      "bookTitle": [
+        "h1",
+        ".entry-title",
+        ".td-page-title"
+      ],
+      "bookAuthor": [
+        "a[href*='/author/']",
+        ".author",
+        "[class*='author']"
+      ],
+      "bookCover": [
+        ".entry-thumb img",
+        ".td-post-featured-image img",
+        "article img"
+      ],
+      "bookDescription": [
+        ".entry-content",
+        ".td-post-content",
+        ".description"
+      ],
+      "chapterContainers": [
+        "main",
+        ".td-main-content-wrap",
+        "body"
+      ],
+      "chapterLinks": [
+        "a[href*='/chuong-']"
+      ],
+      "pagination": [
+        "a[href*='/page/']"
+      ],
+      "chapterTitle": [
+        "h1",
+        ".entry-title"
+      ],
+      "chapterContent": [
+        "#chapter-content",
+        "#content",
+        ".chapter-content",
+        ".reading-content",
+        ".entry-content",
+        "[itemprop='articleBody']"
+      ],
+      "removeElements": [
+        "script",
+        "style",
+        "noscript",
+        "iframe",
+        ".ads",
+        "[class*='advert']"
+      ]
+    },
+    "maxConcurrency": 3,
+    "minDelayMs": 200,
+    "chapterUrlRules": {
+      "patterns": [
+        "^/[^/]+/chuong-\\d+(?:-[^/]+)?/?$"
+      ],
+      "extractFrom": "URL_PATH",
+      "allowDomIndexFallback": false
+    },
+    "paginationRules": {
+      "strategy": "PAGE_LINKS",
+      "pageLinkSelector": "a[href*='/page/']"
+    }
+  }
+}

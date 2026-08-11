@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "metruyenhot",
+  "version": "1.0.0",
+  "name": "Mê Truyện Hot",
+  "domains": [
+    "metruyenhot.me"
+  ],
+  "parser": "PROFILE",
+  "profile": {
+    "selectors": {
+      "bookTitle": [
+        "h1",
+        ".story-title",
+        ".title"
+      ],
+      "bookAuthor": [
+        "a[href*='/tac-gia/']",
+        ".author",
+        "[class*='author']"
+      ],
+      "bookCover": [
+        ".book-cover img",
+        ".story-cover img",
+        ".cover img"
+      ],
+      "bookDescription": [
+        ".story-description",
+        ".description",
+        ".desc"
+      ],
+      "chapterContainers": [
+        "#list-chapter",
+        ".list-chapter",
+        "main",
+        "body"
+      ],
+      "chapterLinks": [
+        "a[href*='/chuong-']"
+      ],
+      "pagination": [
+        ".pagination a[href*='page=']",
+        "a[href*='?page=']"
+      ],
+      "chapterTitle": [
+        "h1",
+        ".chapter-title"
+      ],
+      "chapterContent": [
+        "#chapter-content",
+        "#content",
+        ".chapter-content",
+        ".reading-content",
+        ".entry-content"
+      ],
+      "removeElements": [
+        "script",
+        "style",
+        "noscript",
+        "iframe",
+        ".ads",
+        "[class*='advert']"
+      ]
+    },
+    "maxConcurrency": 3,
+    "minDelayMs": 250,
+    "chapterUrlRules": {
+      "patterns": [
+        "^/[^/]+/chuong-\\d+/?$"
+      ],
+      "extractFrom": "URL_PATH",
+      "allowDomIndexFallback": false
+    },
+    "paginationRules": {
+      "strategy": "PAGE_LINKS",
+      "pageLinkSelector": ".pagination a[href*='page=']",
+      "pageParamName": "page"
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "sstruyen",
+  "version": "1.0.0",
+  "name": "SSTruyen",
+  "domains": [
+    "sstruyen.net"
+  ],
+  "parser": "SSTRUYEN",
+  "profile": {
+    "selectors": {
+      "bookTitle": [
+        "h1",
+        ".book-title",
+        ".story-title",
+        ".title"
+      ],
+      "bookAuthor": [
+        "a[href*='/tac-gia/']",
+        ".author",
+        ".book-author",
+        "[class*='author']"
+      ],
+      "bookCover": [
+        ".book-cover img",
+        ".story-cover img",
+        ".cover img",
+        "[class*='thumb'] img"
+      ],
+      "bookDescription": [
+        ".book-description",
+        ".story-description",
+        ".description",
+        ".desc",
+        "[class*='introduc']"
+      ],
+      "chapterContainers": [
+        "#list-chapter",
+        ".chapter-list",
+        ".list-chapter",
+        "main",
+        "body"
+      ],
+      "chapterLinks": [
+        "a[href*='/chuong-']"
+      ],
+      "pagination": [
+        "a[href*='/page/']",
+        ".pagination a"
+      ],
+      "chapterTitle": [
+        "h1",
+        ".chapter-title"
+      ],
+      "chapterContent": [
+        "#chapter-content",
+        "#content",
+        ".chapter-content",
+        ".reading-content",
+        ".entry-content"
+      ],
+      "removeElements": [
+        "script",
+        "style",
+        "noscript",
+        "iframe",
+        ".ads",
+        "[class*='advert']"
+      ]
+    },
+    "maxConcurrency": 3,
+    "minDelayMs": 200,
+    "chapterUrlRules": {
+      "patterns": [
+        "^/truyen/[^/]+/chuong-\\d+/?$"
+      ],
+      "extractFrom": "URL_PATH",
+      "allowDomIndexFallback": false
+    },
+    "paginationRules": {
+      "strategy": "PAGE_LINKS",
+      "pageLinkSelector": "a[href*='/page/']"
+    }
+  }
+}

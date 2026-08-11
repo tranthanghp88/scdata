@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "tangthuvien",
+  "version": "1.0.0",
+  "name": "Tàng Thư Viện",
+  "domains": [
+    "tangthuvien.org"
+  ],
+  "parser": "TANGTHUVIEN",
+  "profile": {
+    "selectors": {
+      "bookTitle": [
+        "main h1",
+        "h1"
+      ],
+      "bookAuthor": [
+        "a[href*='/tac-gia/']",
+        ".author"
+      ],
+      "bookCover": [
+        "main img",
+        ".book-cover img"
+      ],
+      "bookDescription": [
+        "[class*='summary']",
+        "[class*='description']",
+        "[class*='intro']"
+      ],
+      "chapterContainers": [
+        "main"
+      ],
+      "chapterLinks": [
+        "main a"
+      ],
+      "chapterTitle": [
+        "main h1",
+        "h1"
+      ],
+      "chapterContent": [
+        "main"
+      ],
+      "removeElements": [
+        "script",
+        "style",
+        "noscript",
+        "iframe",
+        "nav",
+        "footer",
+        ".ads",
+        "[class*='advert']"
+      ]
+    },
+    "maxConcurrency": 4,
+    "minDelayMs": 150,
+    "chapterUrlRules": {
+      "patterns": [
+        "^/[^/]+/\\d+/?$"
+      ],
+      "extractFrom": "URL_PATH",
+      "allowDomIndexFallback": false
+    },
+    "paginationRules": {
+      "strategy": "NONE"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-08-11T14:48:18.945Z",
+  "providers": [
+    {
+      "id": "metruyenchuvn",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/tranthanghp88/scdata/main/providers/metruyenchuvn.json",
+      "sha256": "a49d965393514d7a22450f2a3a83b8ed5ebc1324932ad29171f8bfcc291a1db2",
+      "minAppVersion": "1.0.0"
+    },
+    {
+      "id": "metruyenhot",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/tranthanghp88/scdata/main/providers/metruyenhot.json",
+      "sha256": "830a31a234484b07b5fd4780e3d12f2f643818b56b2bb2e53db69855fc44c01b",
+      "minAppVersion": "1.0.0"
+    },
+    {
+      "id": "monkeydd",
+      "version": "1.0.1",
+      "url": "https://raw.githubusercontent.com/tranthanghp88/scdata/main/providers/monkeydd.json",
+      "sha256": "7ce61c89986f8917b83edaf1378eb66f1ba301a5b3134864dc283695ae5cbfee",
+      "minAppVersion": "1.0.0"
+    },
+    {
+      "id": "nhanisme",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/tranthanghp88/scdata/main/providers/nhanisme.json",
+      "sha256": "662695dacbcd16c2caa5c00d1095127523f78b74df6eb1ed74f5a783942d9a05",
+      "minAppVersion": "1.0.0"
+    },
+    {
+      "id": "sstruyen",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/tranthanghp88/scdata/main/providers/sstruyen.json",
+      "sha256": "c2e56e9c7db2ba48907badceb7f38765012cff7d6637d5824b6fac406459ec40",
+      "minAppVersion": "1.0.0"
+    },
+    {
+      "id": "tangthuvien",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/tranthanghp88/scdata/main/providers/tangthuvien.json",
+      "sha256": "b787b8de9789140337c7e8eea58f4be46593fd77c9bdca22e9a58c6a645b9088",
+      "minAppVersion": "1.0.0"
+    },
+    {
+      "id": "truyencom",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/tranthanghp88/scdata/main/providers/truyencom.json",
+      "sha256": "ea6f9078207f42705230fb6449b90a775fd8065e14116d87899a7369c6b08748",
+      "minAppVersion": "1.0.0"
+    },
+    {
+      "id": "truyenfullmoi",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/tranthanghp88/scdata/main/providers/truyenfullmoi.json",
+      "sha256": "11309cd061ca72284e0f51142355d8b5cb38ee5f813eb9bf168f375c0d7f7324",
+      "minAppVersion": "1.0.0"
+    },
+    {
+      "id": "truyenhot",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/tranthanghp88/scdata/main/providers/truyenhot.json",
+      "sha256": "30a4ccca631accc00edd3b0df2a2dccf0aa78a100a7df72613075cbfa8f3e20b",
+      "minAppVersion": "1.0.0"
+    },
+    {
+      "id": "tvtruyen",
+      "version": "1.1.0",
+      "url": "https://raw.githubusercontent.com/tranthanghp88/scdata/main/providers/tvtruyen.json",
+      "sha256": "9886a691bafba19eee9564952bb4430f45a398a7c31705677dedeff7471582fb",
+      "minAppVersion": "1.0.0"
+    },
+    {
+      "id": "vivutruyen",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/tranthanghp88/scdata/main/providers/vivutruyen.json",
+      "sha256": "ac061d507ced6d4dfe10825ef4a0ba5f41f4191164dfb93a260e0c9ca27fabee",
+      "minAppVersion": "1.0.0"
+    },
+    {
+      "id": "vivutruyen2",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/tranthanghp88/scdata/main/providers/vivutruyen2.json",
+      "sha256": "25c0badce67d57d97f8e7451c96379cca32c6a590abce93ec4c3e7a765b82467",
+      "minAppVersion": "1.0.0"
+    }
+  ]
+}
