@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "hetushu",
+  "version": "1.1.0",
+  "name": "Hetushu 和图书",
+  "domains": ["hetushu.com"],
+  "parser": "HETUSHU",
+  "profile": {
+    "selectors": {
+      "chapterContent": ["#content"],
+      "chapterContainers": ["#list", "#catalog", "#dir", ".chapter-list", ".booklist", ".catalog", ".book-dir"]
+    },
+    "maxConcurrency": 1,
+    "minDelayMs": 1000,
+    "paginationRules": { "strategy": "NONE" }
+  }
+}

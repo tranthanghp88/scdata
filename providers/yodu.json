@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "yodu",
+  "version": "1.2.0",
+  "name": "Yodu 有度中文网",
+  "domains": ["yodu.org"],
+  "parser": "PROFILE",
+  "profile": {
+    "selectors": {
+      "bookTitle": [".book-detail-x h1"],
+      "bookAuthor": [".book-detail-x a[href^='/authorarticle/']"],
+      "bookCover": [".book-detail-x .cover img"],
+      "bookDescription": [".book-detail-x .det-abt"],
+      "bookCategories": [".g_bread a[title]"],
+      "chapterContainers": ["#chapterList"],
+      "chapterLinks": ["a[href]"],
+      "pagination": [],
+      "chapterContent": ["#TextContent"]
+    },
+    "maxConcurrency": 1,
+    "minDelayMs": 1500,
+    "missingChapterLinkRecovery": { "strategy": "YODU_NEXT_LINK", "maxRequests": 50 },
+    "chapterContentPagination": { "strategy": "YODU_CONTINUATION", "maxPages": 20 },
+    "chapterUrlRules": {
+      "patterns": ["^/book/\\d+/\\d+\\.html$"],
+      "extractFrom": "URL_PATH",
+      "allowDomIndexFallback": false
+    },
+    "paginationRules": { "strategy": "NONE" }
+  }
+}

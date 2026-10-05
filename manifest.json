@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-11T14:48:18.945Z",
+  "generatedAt": "2026-10-05T17:35:58.734Z",
   "providers": [
     {
       "id": "metruyenchuvn",
@@ -85,6 +85,20 @@
       "url": "https://raw.githubusercontent.com/tranthanghp88/scdata/main/providers/vivutruyen2.json",
       "sha256": "25c0badce67d57d97f8e7451c96379cca32c6a590abce93ec4c3e7a765b82467",
       "minAppVersion": "1.0.0"
+    },
+    {
+      "id": "hetushu",
+      "version": "1.1.0",
+      "url": "https://raw.githubusercontent.com/tranthanghp88/scdata/main/providers/hetushu.json",
+      "sha256": "8ade48876cebdfb55d6e5797801927d791cc447bebb9dc436ce2a949adc76184",
+      "minAppVersion": "1.0.1"
+    },
+    {
+      "id": "yodu",
+      "version": "1.2.0",
+      "url": "https://raw.githubusercontent.com/tranthanghp88/scdata/main/providers/yodu.json",
+      "sha256": "79278bb02f269bd8861c90b513a561b0eca035c6a7b0a0b9035f11a43ac59140",
+      "minAppVersion": "1.0.1"
     }
   ]
 }
